@@ -131,7 +131,7 @@ GrammarsettingsController::RevertConfigFile();
 
 
 
-
+var_dump(Craft::$app->getPlugins()->isPluginInstalled('redactor'));die;
 
 
         if(Craft::$app->request->isCpRequest && Craft::$app->getPlugins()->isPluginInstalled('redactor')) {
