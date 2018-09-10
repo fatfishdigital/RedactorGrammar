@@ -129,7 +129,12 @@ GrammarsettingsController::RevertConfigFile();
 
             });
 
-        if(Craft::$app->request->isCpRequest) {
+
+
+
+
+
+        if(Craft::$app->request->isCpRequest && Craft::$app->getPlugins()->isPluginInstalled('redactor')) {
             Event::on(Field::class, Field::EVENT_REGISTER_PLUGIN_PATHS, function (RegisterPluginPathsEvent $event) {
             $source = Craft::getAlias('@fatfish/redactorgrammar') . DIRECTORY_SEPARATOR . 'assetbundles/redactorgrammar/dist/js';
             $event->paths[] = $source;
