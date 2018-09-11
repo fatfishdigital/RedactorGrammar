@@ -92,8 +92,16 @@ class GrammarsettingsController extends Controller
         $FileLocation = Craft::$app->getConfig()->configDir.DIRECTORY_SEPARATOR.'redactor/'.'Standard.json';
         $StandardConfigContent = file_get_contents($FileLocation);
         $StandardConfig = json_decode($StandardConfigContent);
-        $StandardConfig->plugins[]=$PluginName;
-        file_put_contents($FileLocation,json_encode($StandardConfig));
+
+        if(!array_search($PluginName,$StandardConfig->plugins))
+        {
+            $StandardConfig->plugins[]=$PluginName;
+            file_put_contents($FileLocation,json_encode($StandardConfig));
+        }
+
+
+
+
 
     }
 

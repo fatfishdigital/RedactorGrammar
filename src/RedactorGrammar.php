@@ -107,14 +107,14 @@ class RedactorGrammar extends Plugin
                 $event->rules['getapi'] = 'redactor-grammar/grammarsettings/index';
             }
         );
-        GrammarsettingsController::WriteConfigFile();
+
         // Do something after we're installed
         Event::on(
             Plugins::class,
             Plugins::EVENT_AFTER_INSTALL_PLUGIN,
             function (PluginEvent $event) {
                 if ($event->plugin === $this) {
-
+                    GrammarsettingsController::WriteConfigFile();
                 }
             }
         );
