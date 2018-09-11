@@ -88,7 +88,7 @@ class GrammarsettingsController extends Controller
     public static function WriteConfigFile()
     {
 
-        $PluginName = 'redactorgrammar';
+        $PluginName = 'RedactorGrammar';
         $FileLocation = Craft::$app->getConfig()->configDir.DIRECTORY_SEPARATOR.'redactor/'.'Standard.json';
         $StandardConfigContent = file_get_contents($FileLocation);
         $StandardConfig = json_decode($StandardConfigContent);
@@ -110,7 +110,7 @@ class GrammarsettingsController extends Controller
 
 
 
-        $PluginName = 'redactorgrammar';
+        $PluginName = 'RedactorGrammar';
         $FileLocation = Craft::$app->getConfig()->configDir.DIRECTORY_SEPARATOR.'redactor/'.'Standard.json';
         $StandardConfigContent = file_get_contents($FileLocation);
         $StandardConfig = json_decode($StandardConfigContent);
