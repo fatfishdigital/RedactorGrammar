@@ -1,6 +1,6 @@
 # RedactorGrammar plugin for Craft CMS 3.x
 
-Redactor with beyond grammar extension
+Redactor and Beyond Grammar Checking extension
 
 ![Screenshot](resources/img/plugin-logo.png)
 
@@ -18,26 +18,29 @@ To install the plugin, follow these instructions.
 
 2. Then tell Composer to load the plugin:
 
-        composer require https://github.com/fatfishdigital/redactor-grammar
+        composer require fatfish/redactorgrammar
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for RedactorGrammar.
 
 ## RedactorGrammar Overview
 
--Insert text here-
+   RedactorGrammar is an extension which allows real-time grammar checking, spelling, style checking and terminology management right into your Craft website.
+
 
 ## Configuring RedactorGrammar
 
--Insert text here-
+** In order to use this plugin you must have the Redactor plugin installed and configured properly. **
 
-## Using RedactorGrammar
+![Screenshot](resources/img/settings.png)
 
--Insert text here-
+In order to use this plugin you first need to obtain the Beyond Grammar Checking API from http://prowritingaid.com/en/App/BeyondGrammar and then enter your API key in the plugin's settings page.
 
-## RedactorGrammar Roadmap
+Voila! you are done.
 
-Some things to do, and ideas for potential features:
+## Credits
 
-* Release it
+* Pixel & Tonic (Redactor plugin powered by https://imperavi.com/redactor/)
+* ProWritingAid (https://prowritingaid.com/)
+
 
 Brought to you by [fatfish](https://fatfish.com.au)
