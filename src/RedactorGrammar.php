@@ -85,7 +85,7 @@ class RedactorGrammar extends Plugin
         parent::init();
         self::$plugin = $this;
 
-//GrammarsettingsController::RevertConfigFile();
+
         // Register our site routes
         Event::on(
             UrlManager::class,
@@ -107,7 +107,7 @@ class RedactorGrammar extends Plugin
                 $event->rules['getapi'] = 'redactor-grammar/grammarsettings/index';
             }
         );
-//        GrammarsettingsController::WriteConfigFile();
+        GrammarsettingsController::WriteConfigFile();
         // Do something after we're installed
         Event::on(
             Plugins::class,
@@ -134,11 +134,11 @@ class RedactorGrammar extends Plugin
 
 
         if(Craft::$app->request->isCpRequest && Craft::$app->getPlugins()->isPluginInstalled('redactor')) {
-//            Event::on(Field::class, Field::EVENT_REGISTER_PLUGIN_PATHS, function (RegisterPluginPathsEvent $event) {
-//            $source = Craft::getAlias('@fatfish/redactorgrammar') . DIRECTORY_SEPARATOR . 'assetbundles/redactorgrammar/dist/js';
-//            $event->paths[] = $source;
-//            Craft::$app->getView()->registerAssetBundle(RedactorGrammarAsset::class);
-//                      });
+            Event::on(Field::class, Field::EVENT_REGISTER_PLUGIN_PATHS, function (RegisterPluginPathsEvent $event) {
+            $source = Craft::getAlias('@fatfish/redactorgrammar') . DIRECTORY_SEPARATOR . 'assetbundles/redactorgrammar/dist/js';
+            $event->paths[] = $source;
+            Craft::$app->getView()->registerAssetBundle(RedactorGrammarAsset::class);
+                      });
             }
 
 /**
