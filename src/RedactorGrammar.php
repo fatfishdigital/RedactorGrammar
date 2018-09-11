@@ -85,7 +85,7 @@ class RedactorGrammar extends Plugin
         parent::init();
         self::$plugin = $this;
 
-GrammarsettingsController::RevertConfigFile();
+//GrammarsettingsController::RevertConfigFile();
         // Register our site routes
         Event::on(
             UrlManager::class,
@@ -107,7 +107,7 @@ GrammarsettingsController::RevertConfigFile();
                 $event->rules['getapi'] = 'redactor-grammar/grammarsettings/index';
             }
         );
-        GrammarsettingsController::WriteConfigFile();
+//        GrammarsettingsController::WriteConfigFile();
         // Do something after we're installed
         Event::on(
             Plugins::class,
