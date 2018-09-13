@@ -29,7 +29,7 @@ To install the plugin, follow these instructions.
 
 ## Configuring RedactorGrammar
 
-** In order to use this plugin you must have the Redactor plugin installed and configured properly. **
+**In order to use this plugin you must have the Redactor plugin installed and configured properly.**
 
 ![Screenshot](resources/img/settings.png)
 
