@@ -135,7 +135,7 @@ class RedactorGrammar extends Plugin
 
         if(Craft::$app->request->isCpRequest && Craft::$app->getPlugins()->isPluginInstalled('redactor')) {
             Event::on(Field::class, Field::EVENT_REGISTER_PLUGIN_PATHS, function (RegisterPluginPathsEvent $event) {
-            $source = Craft::getAlias('@fatfish/redactorgrammar') . DIRECTORY_SEPARATOR . 'assetbundles/redactorgrammar/dist/js';
+            $source = Craft::getAlias('@fatfish/redactorgrammar') . DIRECTORY_SEPARATOR . 'assetbundles/RedactorGrammar/dist/js';
             $event->paths[] = $source;
             Craft::$app->getView()->registerAssetBundle(RedactorGrammarAsset::class);
                       });

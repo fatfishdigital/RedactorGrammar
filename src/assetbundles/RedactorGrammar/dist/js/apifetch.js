@@ -12,15 +12,13 @@ $.ajax({
     data: {id: 1}, // just for fun
     type: 'GET',
     async : false,
-    success: function(data) {
-
-        if(data==="false")
+    success: function(response) {
+        if(!response)
         {
             Craft.cp.displayNotice("Invalid Api Key");
         }
         else
         {
-            var response=JSON.parse(data);
             $.each(response, function (key,value) {
 
                 if(typeof(value['field-name'])==="undefined")

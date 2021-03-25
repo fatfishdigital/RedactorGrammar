@@ -43,7 +43,7 @@ class RedactorGrammarAsset extends AssetBundle
     public function init()
     {
         // define the path that your publishable resources live
-        $this->sourcePath = "@fatfish/redactorgrammar/assetbundles/redactorgrammar/dist";
+        $this->sourcePath = "@fatfish/redactorgrammar/assetbundles/RedactorGrammar/dist";
 
         // define the dependencies
         $this->depends = [

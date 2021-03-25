@@ -32,7 +32,7 @@ $R(field, {
 
             //[optional] path to service which provides grammar checking
             // url shouldn't contain "/" in the end
-            serviceUrl: "https://rtg.prowritingaid.com",
+            serviceUrl: "//rtg.prowritingaid.com",
         },
         grammar: {
             languageFilter: ["en-US", "en-GB"],

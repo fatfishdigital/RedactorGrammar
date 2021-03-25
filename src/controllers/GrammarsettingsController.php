@@ -65,8 +65,7 @@ class GrammarsettingsController extends Controller
 
               if($ProAidApiKey==='Some Default' || is_null($ProAidApiKey) || empty($ProAidApiKey))
               {
-                  echo json_encode(false);
-                  return;
+                  return $this->asJson(false);
               }
             foreach ($Fields as $field):
                 if($field instanceof \craft\redactor\Field):
@@ -77,7 +76,7 @@ class GrammarsettingsController extends Controller
                 endif;
             endforeach;
             $fieldName[]=['API'=>$ProAidApiKey];
-            echo json_encode($fieldName);
+            return $this->asJson($fieldName);
         }
 
     }

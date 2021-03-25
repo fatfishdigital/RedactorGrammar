@@ -1,7 +1,5 @@
-
 (function($R)
 {
-
     $R.add('plugin', 'beyondgrammar', {
         init: function(app)
         {
@@ -18,6 +16,11 @@
             {
                 e.preventDefault();
                 this.app.stopBlur = true;
+                var offset = this.app.offset.get();
+                setTimeout(function() {
+                    this.app.offset.set(offset);
+                }.bind(this), 10);
+
                 return;
             }
 
